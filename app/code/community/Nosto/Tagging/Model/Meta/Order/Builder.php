@@ -46,6 +46,7 @@ class Nosto_Tagging_Model_Meta_Order_Builder
         $nostoItem = null;
         $currencyCode = $order->getOrderCurrencyCode();
         switch ($item->getProductType()) {
+            case Mage_Downloadable_Model_Product_Type::TYPE_DOWNLOADABLE:
             case Mage_Catalog_Model_Product_Type::TYPE_SIMPLE:
                 /** @var Nosto_Tagging_Model_Meta_Order_Item_Simple $simpleItem */
                 $simpleItem = Mage::getModel('nosto_tagging/meta_order_item_simple');
